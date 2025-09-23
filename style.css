@@ -1,0 +1,49 @@
+/* --- Global Styles --- */
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* --- Form Input Styles (Helper Classes) --- */
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #4b5563; /* text-gray-600 */
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db; /* border-gray-300 */
+    border-radius: 0.5rem; /* rounded-lg */
+    transition: ring 0.2s, border-color 0.2s;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #3b82f6; /* border-blue-500 */
+    --tw-ring-color: rgba(59, 130, 246, 0.4);
+    box-shadow: 0 0 0 3px var(--tw-ring-color);
+}
+
+/* --- FAQ Accordion --- */
+.faq-item .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px; /* Adjust as needed */
+    transition: max-height 0.4s ease-in;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.faq-item .faq-icon {
+     transition: transform 0.3s ease-in-out;
+}
+
