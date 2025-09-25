@@ -23,7 +23,7 @@ body {
     outline: none;
     border-color: #3b82f6; /* border-blue-500 */
     --tw-ring-color: rgba(59, 130, 246, 0.4);
-    box-shadow: 0 0 0 3px var(--tw-ring-color);
+    box-shadow: none;
 }
 
 /* --- FAQ Accordion --- */
