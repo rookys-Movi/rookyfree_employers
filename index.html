@@ -3,7 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rooky Free 企業様向け | 学生寮へ直接届く求人広告</title>
+    <title>Rooky Free 企業様向</title>
+    <link rel="icon" type="image/png" href="images/rookylogo.png">
+    
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://unpkg.com https://script.google.com;
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com;
+        font-src 'self' https://fonts.gstatic.com;
+        img-src 'self' data:;
+        connect-src 'self' https://script.google.com;
+        frame-ancestors 'none';
+        base-uri 'self';
+        form-action 'self' https://script.google.com;
+    ">
+    
+    <!-- Additional Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -232,6 +252,7 @@
                 </div>
                 <form id="inquiryForm" class="mt-10 bg-white p-8 rounded-lg shadow-none space-y-6" data-aos="fade-up" data-aos-delay="100">
                     <input type="hidden" name="landingPageID" value="RookyFree_企業">
+                    <input type="hidden" name="csrf_token" id="csrf_token" value="">
                     
                     <div>
                         <label for="companyName" class="form-label">会社名<span class="text-red-500">*</span></label>
@@ -272,10 +293,10 @@
     <!-- Footer -->
     <footer class="bg-gray-800 text-white">
         <div class="container mx-auto px-6 py-8 text-center">
-            <p class="font-semibold"><a href="https://rookyworks.jp/" target="_blank" class="hover:text-cyan-500 transition">ルーキーワークス株式会社</a></p>
+            <p class="font-semibold"><a href="https://rookyworks.jp/" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-500 transition">ルーキーワークス株式会社</a></p>
             <div class="mt-4 text-sm text-gray-400">
-                <a href="https://rookyworks.jp/privacy-policy/" class="hover:text-cyan-500 transition" target="_blank">プライバシーポリシー </a> <span class="mx-2">|</span>
-                <a href="https://rookyworks.jp/user-agreement/" class="hover:text-cyan-500 transition" target="_blank">利用規約</a>
+                <a href="https://rookyworks.jp/privacy-policy/" class="hover:text-cyan-500 transition" target="_blank" rel="noopener noreferrer">プライバシーポリシー </a> <span class="mx-2">|</span>
+                <a href="https://rookyworks.jp/user-agreement/" class="hover:text-cyan-500 transition" target="_blank" rel="noopener noreferrer">利用規約</a>
                 <span class="mx-2">|</span>
                 <small>&copy; 2025 Rooky Free by Rooky</small>
             </div>
