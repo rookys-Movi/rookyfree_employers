@@ -1,7 +1,52 @@
-/* --- Global Styles --- */
+/* --- Global Styles & New Color Palette --- */
+:root {
+    --color-green: #00a29a;
+    --color-yellow: #f5dc3d;
+    --color-blue: #6ac7e9;
+    --color-navy: #002835;
+}
+
 body {
     font-family: 'Noto Sans JP', sans-serif;
+    color: var(--color-navy);
 }
+
+/* --- Animated Wave Background --- */
+.wave-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px; 
+    overflow: hidden;
+}
+
+.wave {
+    background-size: 1000px 100%;
+    position: absolute;
+    bottom: 0;
+    width: 200%;
+    height: 100%;
+    animation: wave-animation 15s linear infinite;
+}
+
+.wave-yellow {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 100' preserveAspectRatio='none'%3e%3cpath d='M0,50 C250,100 750,0 1000,50 L1000,100 L0,100 Z' fill='%23f5dc3d'/%3e%3c/svg%3e");
+    opacity: 0.8;
+    animation-duration: 12s;
+}
+
+.wave-green {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 100' preserveAspectRatio='none'%3e%3cpath d='M0,60 C200,20 800,100 1000,60 L1000,100 L0,100 Z' fill='%2300a29a'/%3e%3c/svg%3e");
+    opacity: 0.7;
+    animation-direction: reverse;
+}
+
+@keyframes wave-animation {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
 
 /* --- Form Input Styles (Helper Classes) --- */
 .form-label {
@@ -21,9 +66,8 @@ body {
 
 .form-input:focus {
     outline: none;
-    border-color: #3b82f6; /* border-blue-500 */
-    --tw-ring-color: rgba(59, 130, 246, 0.4);
-    box-shadow: none;
+    border-color: var(--color-green);
+    box-shadow: 0 0 0 3px rgba(0, 162, 154, 0.3);
 }
 
 /* --- FAQ Accordion --- */
@@ -47,3 +91,16 @@ body {
      transition: transform 0.3s ease-in-out;
 }
 
+/* --- Footer overhang wave ---
+footer { position: relative; overflow: visible; }
+.wave-top-of-footer {
+    position: absolute;
+    top: -200px;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    pointer-events: none;
+    z-index: 0;
+}
+footer .container { position: relative; z-index: 1; }
+ */
