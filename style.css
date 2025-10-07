@@ -1,4 +1,4 @@
-/* --- Global Styles & New Color Palette --- */
+/* --- Global Styles & Color Palette --- */
 :root {
     --color-green: #00a29a;
     --color-yellow: #f5dc3d;
@@ -11,7 +11,26 @@ body {
     color: var(--color-navy);
 }
 
-/* --- Form Input Styles (Helper Classes) --- */
+/* --- Background Wrappers --- */
+.top-wrapper {
+    background-color: white;
+}
+
+.bottom-wrapper {
+    /* IMPORTANT: Replace with the actual path to your background image */
+    background-image: url('images/Rookyfree_LP_back.webp');
+    background-color: #f8fafc; /* Fallback color */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Creates a nice parallax effect */
+}
+
+/* Make sections inside wrappers transparent to show the wrapper's background */
+main > div > section {
+    background-color: transparent !important;
+}
+
+/* --- Form Input Styles --- */
 .form-label {
     display: block;
     margin-bottom: 0.5rem;
@@ -22,8 +41,8 @@ body {
 .form-input {
     width: 100%;
     padding: 0.75rem 1rem;
-    border: 1px solid #d1d5db; /* border-gray-300 */
-    border-radius: 0.5rem; /* rounded-lg */
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
     transition: ring 0.2s, border-color 0.2s;
 }
 
@@ -39,31 +58,14 @@ body {
     overflow: hidden;
     transition: max-height 0.3s ease-out;
 }
-
 .faq-item.active .faq-answer {
-    max-height: 200px; /* Adjust as needed */
+    max-height: 200px;
     transition: max-height 0.4s ease-in;
 }
-
 .faq-item.active .faq-icon {
     transform: rotate(45deg);
-    transition: transform 0.3s ease-in-out;
 }
-
 .faq-item .faq-icon {
      transition: transform 0.3s ease-in-out;
 }
 
-/* --- Footer overhang wave ---
-footer { position: relative; overflow: visible; }
-.wave-top-of-footer {
-    position: absolute;
-    top: -200px;
-    left: 0;
-    width: 100%;
-    height: 200px;
-    pointer-events: none;
-    z-index: 0;
-}
-footer .container { position: relative; z-index: 1; }
- */
