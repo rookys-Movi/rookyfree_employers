@@ -9,11 +9,6 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Google Fonts: Noto Sans JP -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-
     <!-- Animate On Scroll (AOS) Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -209,6 +204,7 @@
                         </a>
                     </div>
                 </div>
+                </div>
             </section>
 
             <!-- FAQ Section -->
@@ -246,9 +242,30 @@
                     </div>
                 </div>
             </section>
-            
+
+            <!-- PDF Viewer Section -->
+            <section class="py-20 bg-gray-50" id="pdf-viewer">
+                <div class="container mx-auto px-6 text-center">
+                    <h2 class="text-3xl font-bold mb-8">RookyFree2025/早稲田エリア版　サンプル</h2>
+
+                <!-- Embedded PDF -->
+                <div class="w-full max-w-4xl mx-auto border shadow-none rounded-lg overflow-hidden">
+                    <embed 
+                        src="https://rookyworks.jp/wp-content/uploads/2025/11/RookyFree_waseda.pdf" 
+                        type="application/pdf" 
+                        class="w-full" 
+                        style="height: 800px;"
+                     />
+                 </div>
+                </div>
+            </section>
+
             <!-- Contact Form Section -->
+            
             <section id="form" class="py-20">
+                <div class="container mx-auto px-6 text-center">
+                    <h2 class="text-3xl font-bold mb-8">お問い合わせ</h2>
+                </div>
                 <div class="container mx-auto px-6 max-w-2xl">
                     <form id="inquiryForm" class="mt-10 bg-white p-8 rounded-lg shadow-none space-y-6" data-aos="fade-up" data-aos-delay="100">
                         <input type="hidden" name="landingPageID" value="RookyFree_企業">

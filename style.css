@@ -6,8 +6,42 @@
     --color-navy: #002835;
 }
 
+/* --- Font Face Declaration for コーポレートロゴ ver2 フォント --- */
+/* Note: Add your font files to the fonts/ directory, or use Adobe Fonts */
+/* Common file names: CorporateLogoVer2-Regular, corporate-logo-ver2, etc. */
+@font-face {
+    font-family: 'Corporate Logo ver2';
+    src: url('fonts/CorporateLogoVer2-Regular.woff2') format('woff2'),
+         url('fonts/CorporateLogoVer2-Regular.woff') format('woff'),
+         url('fonts/CorporateLogoVer2-Regular.ttf') format('truetype'),
+         url('fonts/corporate-logo-ver2.woff2') format('woff2'),
+         url('fonts/corporate-logo-ver2.woff') format('woff'),
+         url('fonts/corporate-logo-ver2.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Corporate Logo ver2';
+    src: url('fonts/CorporateLogoVer2-Bold.woff2') format('woff2'),
+         url('fonts/CorporateLogoVer2-Bold.woff') format('woff'),
+         url('fonts/CorporateLogoVer2-Bold.ttf') format('truetype'),
+         url('fonts/corporate-logo-ver2-bold.woff2') format('woff2'),
+         url('fonts/corporate-logo-ver2-bold.woff') format('woff'),
+         url('fonts/corporate-logo-ver2-bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* --- Global Font Application --- */
+* {
+    font-family: 'Corporate Logo ver2', sans-serif;
+}
+
 body {
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Corporate Logo ver2', sans-serif;
     color: var(--color-navy);
 }
 
